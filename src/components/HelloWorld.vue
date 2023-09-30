@@ -1,16 +1,19 @@
 <script setup>
 import { ref } from 'vue'
-
+import login from "./login.vue"
 defineProps({
   msg: String,
 })
 
-const count = ref(0)
+const count = ref(0);
+
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
-
+  <div class="card flex justify-content-center">
+    <Button label="Check" icon="pi pi-check" />
+  </div>
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
@@ -21,9 +24,8 @@ const count = ref(0)
 
   <p>
     Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
+    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the official Vue + Vite
+    starter
   </p>
   <p>
     Install
@@ -31,6 +33,7 @@ const count = ref(0)
     in your IDE for a better DX
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  <login></login>
 </template>
 
 <style scoped>
